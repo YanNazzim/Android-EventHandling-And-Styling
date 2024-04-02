@@ -1,5 +1,6 @@
 package com.example.littlelemon
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -60,7 +61,9 @@ fun UpperPanel(){
             )
         }
         Button(
-            onClick = { /* Add the Toast message here */},
+            onClick = {
+                Toast.makeText(context, "Order Received, Thank you!", Toast.LENGTH_SHORT).show()
+            },
             shape = RoundedCornerShape(20.dp),
             colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF4CE14))
         ) {
